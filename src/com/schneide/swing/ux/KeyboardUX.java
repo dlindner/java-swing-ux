@@ -22,9 +22,9 @@ import javax.swing.UIManager;
 /**
  * UX improvements for keyboard related aspects.
  */
-public final class Keyboard {
+public final class KeyboardUX {
 
-	private Keyboard() {
+	private KeyboardUX() {
 		super();
 	}
 
@@ -58,7 +58,7 @@ public final class Keyboard {
      */
     public static void enableModernFocusTraversal() {
     	if (!SwingUtilities.isEventDispatchThread()) {
-    		SwingUtilities.invokeLater(Keyboard::enableModernFocusTraversal);
+    		SwingUtilities.invokeLater(KeyboardUX::enableModernFocusTraversal);
     		return;
     	}
     	UIManager.put("Button.defaultButtonFollowsFocus", Boolean.TRUE); //$NON-NLS-1$
